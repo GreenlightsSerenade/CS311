@@ -1,0 +1,185 @@
+Simulating for 100 instructions...
+
+CURRENT_PIPE: 0 0 0 0 0 
+++++++ CYCLE COUNT: 1 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 0, 0, 0x0
+MEM_WB_FETCH1: 0, 0, 0x0
+MEM_WB_FETCH2: 0, 0, 0x0
+BUF.PC:0x400004
+CURRENTPC: 400000
+PIPE: 400000 0 0 0 0 
+PIPE_STALL: 0 0 0 0 0 
+
+Current pipeline PC state :
+-------------------------------------
+CYCLE 1:0x00400000|          |          |          |          
+
+CURRENT_PIPE: 400000 0 0 0 0 
+++++++ CYCLE COUNT: 2 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 0, 0, 0x0
+MEM_WB_FETCH1: 0, 0, 0x0
+MEM_WB_FETCH2: 0, 0, 0x0
+----STAGE: ID----
+ID: DEST: 1 REG1: 0, REG2: 1
+VALUE: REG1: 0x0, REG2: 0x0, RD: 0
+ID: ID_EX_IMM: 0x0
+----STAGE: IF----
+BUF.PC:0x400008
+CURRENTPC: 400000
+PIPE: 400004 400000 0 0 0 
+PIPE_STALL: 0 0 0 0 0 
+
+Current pipeline PC state :
+-------------------------------------
+CYCLE 2:0x00400004|0x00400000|          |          |          
+
+CURRENT_PIPE: 400004 400000 0 0 0 
+++++++ CYCLE COUNT: 3 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 0, 0, 0x0
+MEM_WB_FETCH1: 0, 0, 0x0
+MEM_WB_FETCH2: 0, 0, 0x0
+----STAGE: ID----
+ID: DEST: 1 REG1: 1, REG2: 1
+VALUE: REG1: 0x0, REG2: 0x0, RD: 255
+ID: ID_EX_IMM: 0xffffffff
+----STAGE: EX----
+ID: REG1: 0x0 REG2: 0x0
+lui****: 0x0
+EX: ALU_OUT: 0x0
+----STAGE: IF----
+BUF.PC:0x40000c
+CURRENTPC: 400004
+PIPE: 400008 400004 400000 0 0 
+PIPE_STALL: 0 0 0 0 0 
+
+Current pipeline PC state :
+-------------------------------------
+CYCLE 3:0x00400008|0x00400004|0x00400000|          |          
+
+CURRENT_PIPE: 400008 400004 400000 0 0 
+++++++ CYCLE COUNT: 4 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 1, 1, 0x0
+MEM_WB_FETCH1: 0, 0, 0x0
+MEM_WB_FETCH2: 0, 0, 0x0
+F1) REG1: 1, REG2: 1
+fetch_ex_1
+fetch_ex_2
+----STAGE: ID----
+ID: DEST: 5 REG1: 0, REG2: 5
+VALUE: REG1: 0x0, REG2: 0x0, RD: 0
+ID: ID_EX_IMM: 0x0
+----STAGE: EX----
+ID: REG1: 0x0 REG2: 0x0
+ori****: 0xffffffff
+EX: ALU_OUT: 0xffffffff
+----STAGE: MEM----
+ex-mem-alu-out: 0x0
+EX-MEM-DEST: 0x0
+CHOICE : 0
+----STAGE: IF----
+BUF.PC:0x400010
+CURRENTPC: 400008
+PIPE: 40000c 400008 400004 400000 0 
+PIPE_STALL: 0 0 0 0 0 
+
+Current pipeline PC state :
+-------------------------------------
+CYCLE 4:0x0040000c|0x00400008|0x00400004|0x00400000|          
+
+CURRENT_PIPE: 40000c 400008 400004 400000 0 
+++++++ CYCLE COUNT: 5 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 1, 1, 0xffffffff
+MEM_WB_FETCH1: 1, 1, 0x0
+MEM_WB_FETCH2: 1, 0, 0x0
+F1) REG1: 0, REG2: 5
+F2) REG1: 0, REG2: 5
+----STAGE: ID----
+ID: DEST: 4 REG1: 1, REG2: 4
+VALUE: REG1: 0x0, REG2: 0x0, RD: 0
+ID: ID_EX_IMM: 0x0
+----STAGE: EX----
+ID: REG1: 0x0 REG2: 0x0
+lui****: 0x0
+EX: ALU_OUT: 0x0
+----STAGE: MEM----
+ex-mem-alu-out: 0xffffffff
+EX-MEM-DEST: 0x0
+CHOICE : 0
+----STAGE: WB----
+write data: 0(0 IF ALU)
+REG: 1, ALU_OUT: 0x0, MEM_OUT: 0x0
+write alu_out
+MEM_FORWARD OFF1
+----STAGE: IF----
+BUF.PC:0x400014
+CURRENTPC: 40000c
+PIPE: 400010 40000c 400008 400004 400000 
+PIPE_STALL: 0 0 0 0 0 
+
+Current pipeline PC state :
+-------------------------------------
+CYCLE 5:0x00400010|0x0040000c|0x00400008|0x00400004|0x00400000
+
+CURRENT_PIPE: 400010 40000c 400008 400004 400000 
+++++++ CYCLE COUNT: 6 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 1, 5, 0x0
+MEM_WB_FETCH1: 1, 1, 0xffffffff
+MEM_WB_FETCH2: 1, 1, 0x0
+F1) REG1: 1, REG2: 4
+F2) REG1: 1, REG2: 4
+fetch_mem_1
+----STAGE: ID----
+ID: DEST: 4 REG1: 5, REG2: 4
+VALUE: REG1: 0x0, REG2: 0x0, RD: 0
+ID: ID_EX_IMM: 0x0
+----STAGE: EX----
+ID: REG1: 0xffffffff REG2: 0x0
+lw: EX_MEM_DEST: 0xffffffff
+EX: ALU_OUT: 0x0
+----STAGE: MEM----
+ex-mem-alu-out: 0x0
+EX-MEM-DEST: 0x0
+CHOICE : 0
+----STAGE: WB----
+write data: 0(0 IF ALU)
+REG: 1, ALU_OUT: 0xffffffff, MEM_OUT: 0x0
+write alu_out
+----STAGE: IF----
+BUF.PC:0x400018
+CURRENTPC: 400010
+PIPE: 400014 400010 40000c 400008 400004 
+PIPE_STALL: 0 0 0 0 0 
+
+Current pipeline PC state :
+-------------------------------------
+CYCLE 6:0x00400014|0x00400010|0x0040000c|0x00400008|0x00400004
+
+CURRENT_PIPE: 400014 400010 40000c 400008 400004 
+++++++ CYCLE COUNT: 7 ++++++
+BR_TAKE: 0, 0
+EX_MEM_FETCH: 1, 5, 0x0
+MEM_WB_FETCH1: 1, 5, 0x0
+MEM_WB_FETCH2: 1, 1, 0xffffffff
+F1) REG1: 5, REG2: 4
+fetch_ex_1
+F2) REG1: 5, REG2: 4
+F2) REG1: 5, REG2: 4
+----STAGE: ID----
+ID: DEST: 6 REG1: 4, REG2: 5
+VALUE: REG1: 0x0, REG2: 0x0, RD: 6
+ID: ID_EX_IMM: 0x6
+----STAGE: EX----
+ID: REG1: 0x0 REG2: 0x0
+sw: EX_MEM_DEST: 0x0
+EX: ALU_OUT: 0x0
+----STAGE: MEM----
+ex-mem-alu-out: 0x0
+EX-MEM-DEST: 0xffffffff
+CHOICE : 2
+Memory Read Error: Exceed memory boundary 0xffffffff

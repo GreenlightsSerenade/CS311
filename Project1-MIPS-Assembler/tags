@@ -1,0 +1,52 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC=gcc$/;"	m
+Itype	main.cpp	/^struct inst_I Itype[10] = {{"addiu", "001001"}, {"andi", "001100"}, {"beq", "000100"}, {"bne", "000101"}, {"lui", "001111"}, {"lw", "100011"}, {"ori", "001101"}, {"sltiu", "001011"}, {"sw", "101011"}, {"", ""}};$/;"	v	typeref:struct:inst_I
+Jtype	main.cpp	/^struct inst_J Jtype[3] = {{"j", "000010"}, {"jal", "000011"}, {"", ""}};$/;"	v	typeref:struct:inst_J
+Rtype	main.cpp	/^struct inst_R Rtype[10] = {{"addu", "100001"}, {"and", "100100"}, {"jr", "001000"}, {"nor", "100111"}, {"or", "100101"}, {"sltu", "101011"}, {"sll", "000000"}, {"srl", "000010"}, {"subu", "100011"}, {"", ""}};$/;"	v	typeref:struct:inst_R
+address	main.cpp	/^	string address;$/;"	m	struct:reg	file:
+array	Project1_examples/example2_mod.s	/^array:	.word	3$/;"	l
+array2	Project1_examples/example2_mod.s	/^array2:	.word	0x11111111$/;"	l
+data1	Project1_examples/example1.s	/^data1:	.word	100$/;"	l
+data1	Project1_examples/example3.s	/^data1:	.word	100$/;"	l
+data1	Project1_examples/example5.s	/^data1:	.word	0x12c$/;"	l
+data2	Project1_examples/example1.s	/^data2:	.word	200$/;"	l
+data2	Project1_examples/example3.s	/^data2:	.word	200$/;"	l
+data2	Project1_examples/example5.s	/^data2:	.word	0xc8$/;"	l
+data3	Project1_examples/example1.s	/^data3:	.word	0x12345678$/;"	l
+data3	Project1_examples/example3.s	/^data3:	.word	0x12345678$/;"	l
+exit	Project1_examples/example5.s	/^exit:$/;"	l
+find_inst	main.cpp	/^char* find_inst(char *inst_name){\/\/find the inst's op or func$/;"	f
+funct	main.cpp	/^	string funct;$/;"	m	struct:inst_R	file:
+inst_I	main.cpp	/^struct inst_I {$/;"	s	file:
+inst_J	main.cpp	/^struct inst_J {$/;"	s	file:
+inst_R	main.cpp	/^struct inst_R {$/;"	s	file:
+lab1	Project1_examples/example1.s	/^lab1:$/;"	l
+lab1	Project1_examples/example4.s	/^lab1:$/;"	l
+lab2	Project1_examples/example1.s	/^lab2:$/;"	l
+lab3	Project1_examples/example1.s	/^lab3:$/;"	l
+lab3	Project1_examples/example4.s	/^lab3:$/;"	l
+lab4	Project1_examples/example1.s	/^lab4:$/;"	l
+lab4	Project1_examples/example4.s	/^lab4:$/;"	l
+lab5	Project1_examples/example1.s	/^lab5:$/;"	l
+lab5	Project1_examples/example4.s	/^lab5:$/;"	l
+loop	Project1_examples/example5.s	/^loop:$/;"	l
+main	Project1_examples/example1.s	/^main:$/;"	l
+main	Project1_examples/example2_mod.s	/^main:$/;"	l
+main	Project1_examples/example3.s	/^main:$/;"	l
+main	Project1_examples/example4.s	/^main:$/;"	l
+main	Project1_examples/example5.s	/^main:$/;"	l
+main	main.c	/^int main(int argc, char * argv[]){$/;"	f
+main	main.cpp	/^int main(int argc, char * argv[]){$/;"	f
+name	main.cpp	/^	string name;$/;"	m	struct:inst_I	file:
+name	main.cpp	/^	string name;$/;"	m	struct:inst_J	file:
+name	main.cpp	/^	string name;$/;"	m	struct:inst_R	file:
+name	main.cpp	/^	string name;$/;"	m	struct:reg	file:
+op	main.cpp	/^	string op;$/;"	m	struct:inst_I	file:
+op	main.cpp	/^	string op;$/;"	m	struct:inst_J	file:
+parse	main.cpp	/^char* parse(string *input){\/\/parse the line and return the lines $/;"	f
+reg	main.cpp	/^struct reg {$/;"	s	file:

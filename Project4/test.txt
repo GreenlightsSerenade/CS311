@@ -1,0 +1,27 @@
+Testing leaf_example
+	Test seems correct
+
+Testing various_inst
+	Test seems correct
+
+Testing str_cpy
+--- grading_output/str_cpy	2017-12-02 18:15:18.436082548 +0900
++++ -	2017-12-04 02:33:21.026204525 +0900
+@@ -5205,7 +5205,7 @@
+ SET[0]:   WORD[0]: 0x78901234  WORD[0]: 0x90123456  WORD[0]: 0x56789012  WORD[0]: 0x12345678  
+           WORD[1]: 0x56789012  WORD[1]: 0x78901234  WORD[1]: 0x34567890  WORD[1]: 0x90123456  
+ 
+-SET[1]:   WORD[0]: 0x34567890  WORD[0]: 0x90123456  WORD[0]: 0x56789012  WORD[0]: 0x12345678  
+-          WORD[1]: 0x12345678  WORD[1]: 0x78901234  WORD[1]: 0x34567890  WORD[1]: 0x90123456  
++SET[1]:   WORD[0]: 0x78901234  WORD[0]: 0x90123456  WORD[0]: 0x56789012  WORD[0]: 0x12345678  
++          WORD[1]: 0x00000000  WORD[1]: 0x78901234  WORD[1]: 0x34567890  WORD[1]: 0x90123456  
+ 
+ 
+	Results not identical, check the diff output
+
+Testing add_vec
+	Test seems correct
+
+Testing trans_mat
+	Test seems correct
+
